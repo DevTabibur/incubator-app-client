@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Inventory.css';
 
 const Inventory = () => {
+
   return (
-    <div>Inventory</div>
+    <div>
+        <h2>Inventory</h2>
+    </div>
   )
 }
 

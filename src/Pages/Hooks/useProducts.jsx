@@ -6,7 +6,7 @@ const useProducts = () => {
     useEffect(()=>{
         fetch("product-db.json")
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => setProducts(data))
     }, [])
 
   return [products, setProducts]

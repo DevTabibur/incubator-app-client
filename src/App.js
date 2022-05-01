@@ -7,13 +7,19 @@ import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Shared/Login/Login';
 import Inventory from './Pages/Inventory/Inventory';
+import { createContext } from 'react';
+import useProducts from './Pages/Hooks/useProducts';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
+export const ProductContext = createContext([]);
 
 function App() {
+  
+  const [products, setProducts] = useProducts();
+
   return (
-    <>
+    <ProductContext.Provider value={[products, setProducts]}>
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
@@ -24,7 +30,7 @@ function App() {
       </Routes>
       {/* <Footer/> */}
 
-    </>
+    </ProductContext.Provider>
   );
 }
 

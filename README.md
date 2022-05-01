@@ -7,6 +7,7 @@
 2. Bootstrap
 3. swiper
 4. React Router
+5. React Icons
 
 ## Features
 1. Primary-color : #06113C

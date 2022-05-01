@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Incubator from '../../../Assets/Images/logo-2.png'
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -19,17 +20,10 @@ const Header = () => {
 
           <Navbar.Collapse id="responsive-navbar-nav">
 
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
+            <Nav className="ms-auto">
+              <Nav.Link as={Link} to="/inventory">Inventory</Nav.Link>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               
-            </Nav>
-
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
             </Nav>
 
           </Navbar.Collapse>

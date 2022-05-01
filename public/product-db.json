@@ -1,3 +1,74 @@
 [
-    {}
+    {
+        "id" : 1,
+        "name" : "Prod",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/J3fsJQr/prod-1-400x400.jpg"
+    },
+    {
+        "id" : 2,
+        "name" : "Analog Clock",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/FmBM6bm/Simple-Analog-Clock-400x400.jpg"
+    },
+    {
+        "id" : 3,
+        "name" : "Smart Watch",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/wzv9qSN/Black-Smartwatch-400x400.jpg"
+    },
+    {
+        "id" : 4,
+        "name" : "Wireless Router",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/s9PDwMN/Home-Wireless-Router-400x400.jpg"
+    },
+    {
+        "id" : 5,
+        "name" : "Gaming Headset",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/Bzttr79/Gaming-Headset-400x400.jpg"
+    },
+    {
+        "id" : 6,
+        "name" : "FM Wireless Speaker",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/RYjfhCv/FM-Wirelss-Speakers-400x400.jpg"
+    },
+    {
+        "id" : 7,
+        "name" : "Modern Air Purifier",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/5rQnhPf/Modern-Air-Purifier-400x400.jpg"
+    },
+    {
+        "id" : 8,
+        "name" : "Modern Desk Lamp",
+        "short-description" : "",
+        "price" : 30,
+        "supplier" : "Brod Van hel-sing",
+        "quantity" : 3,
+        "image" : "https://i.ibb.co/MRFRf3R/Modern-desk-lamp-400x400.jpg"
+    }
 ]

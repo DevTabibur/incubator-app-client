@@ -5,6 +5,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import { Route, Router, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
+import Login from './Pages/Shared/Login/Login';
+import Inventory from './Pages/Inventory/Inventory';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
@@ -16,9 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
+        <Route path="/inventory" element={<Inventory/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
 
     </>
   );

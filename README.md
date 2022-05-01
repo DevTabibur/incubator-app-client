@@ -6,6 +6,7 @@
 1. React
 2. Bootstrap
 3. swiper
+4. React Router
 
 ## Features
 1. Primary-color : #06113C

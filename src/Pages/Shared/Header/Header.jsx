@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Incubator from '../../../Assets/Images/logo-2.png'
 
 const Header = () => {
   return (
@@ -10,7 +11,10 @@ const Header = () => {
 
         <Container>
 
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img src={Incubator} alt="logo" />
+          </Navbar.Brand>
+          
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse id="responsive-navbar-nav">

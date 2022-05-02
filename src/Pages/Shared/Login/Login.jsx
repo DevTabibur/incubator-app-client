@@ -104,15 +104,7 @@ const Login = () => {
     } else {
       toast("please enter your email address");
     }
-  }
-
-  
-
-  
-
-  const handleSignInWithGoogle = () =>{
-    
-  }
+  };
 
   return (
     <>

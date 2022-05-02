@@ -1,28 +1,103 @@
-import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Register.css';
+// @ts-nocheck
+import { sendEmailVerification } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import auth from "../../../Firebase/firebase.init";
+import "./Register.css";
 
 const Register = () => {
+  const [showPass, setShowPass] = useState(false);
 
-    const [showPass, setShowPass] = useState(false);
+  const [userInfo, setUserInfo] = useState({
+    email: "",
+    password: "",
+    confirmPass: "",
+  });
 
-    const handleRegister = (e)=>{
-        alert()
-    };
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+    general: "",
+  });
 
-    const handleEmailChange = (e) =>{
-        alert()
-    };
+  const [createUserWithEmailAndPassword, user, loading, hookError] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    const handlePasswordChange = (e) =>{
-        alert()
-    };
+  const handleEmailChange = (e) => {
+    const emailRegex = /\S+@\S+\.\S+/;
+    const validEmail = emailRegex.test(e.target.value);
 
-    const handleConfirmPasswordChange =(e)=>{
-        alert()
-    };
+    if (validEmail) {
+      setUserInfo({ ...userInfo, email: e.target.value });
+      setErrors({ ...errors, email: "" });
+    } else {
+      setErrors({ ...errors, email: "Invalid email" });
+      setUserInfo({ ...userInfo, email: "" });
+    }
 
+    // setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    const passwordRegex = /.{6,}/;
+    const validPassword = passwordRegex.test(e.target.value);
+
+    if (validPassword) {
+      setUserInfo({ ...userInfo, password: e.target.value });
+      setErrors({ ...errors, password: "" });
+    } else {
+      setErrors({ ...errors, password: "Minimum 6 characters!" });
+      setUserInfo({ ...userInfo, password: "" });
+    }
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    if (e.target.value === userInfo.password) {
+      setUserInfo({ ...userInfo, confirmPass: e.target.value });
+      setErrors({ ...errors, password: "" });
+    } else {
+      setErrors({ ...errors, password: "Password's don't match" });
+      setUserInfo({ ...userInfo, confirmPass: "" });
+    }
+  };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+    await sendEmailVerification();
+  };
+
+  useEffect(() => {
+    if (hookError) {
+      switch (hookError?.code) {
+        case "auth/invalid-email":
+          toast.error("Invalid email provided, please provide a valid email", {
+            toastId: "InvalidEmail",
+          });
+          break;
+        case "auth/invalid-password":
+          toast.error("Wrong password. Intruder!!", {
+            toastId: "InvalidEmail",
+          });
+          break;
+        default:
+          toast.error("something went wrong", { toastId: "InvalidEmail" });
+      }
+    }
+  }, [hookError]);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user]);
 
   return (
     <>
@@ -54,9 +129,9 @@ const Register = () => {
                       placeholder="Enter email"
                       required
                     />
-                    {/* {errors?.email && (
+                    {errors?.email && (
                       <p className="error-text">{errors.email}</p>
-                    )} */}
+                    )}
                     <Form.Text className="text-muted">
                       We'll never share your email with anyone else.
                     </Form.Text>
@@ -84,9 +159,9 @@ const Register = () => {
                       type="password"
                       placeholder="Confirm Password"
                     />
-                    {/* {errors?.password && (
+                    {errors?.password && (
                       <p className="error-text">{errors.password}</p>
-                    )} */}
+                    )}
                   </Form.Group>
 
                   <Button type="submit" className="w-100 d-block login-btn">
@@ -107,7 +182,7 @@ const Register = () => {
         </Container>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

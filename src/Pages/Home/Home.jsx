@@ -14,13 +14,13 @@ const Home = () => {
     <>
       {/* <HeroBanner/> */}
 
-      <Container className="py-5">
+      {/* <Container className="py-5">
         <Row>
           {products.map((product) => (
             <ShowProductHome key={product.id} product={product} />
           ))}
         </Row>
-      </Container>
+      </Container> */}
 
       {/* <ShopNow/> */}
       {/* <Team/> */}

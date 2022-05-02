@@ -8,22 +8,23 @@ import Team from "../Team/Team";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
-  // const sliceProducts = products.slice(0, 6);
+  const sliceProducts = products.slice(0, 6);
   // console.log(sliceProducts);
   return (
     <>
-      {/* <HeroBanner/> */}
+      <HeroBanner/>
 
-      {/* <Container className="py-5">
+      <Container className="py-5">
         <Row>
-          {products.map((product) => (
+          {sliceProducts.map((product) => (
             <ShowProductHome key={product.id} product={product} />
           ))}
+          <Button className="mt-4 w-50 p-4 mx-auto shadow">Explore More</Button>
         </Row>
-      </Container> */}
+      </Container>
 
       {/* <ShopNow/> */}
-      {/* <Team/> */}
+      <Team/>
     </>
   );
 };

@@ -14,6 +14,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import AddItem from './Pages/AddItems/AddItem';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import Register from './Pages/Shared/Register/Register';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
@@ -37,12 +38,13 @@ function App() {
             <AddItem/>
           </RequireAuth>
         }></Route>
-        
+
         {/* <Route path="/add-item" element={<AddItem/>}></Route> */}
 
         <Route path="/my-items" element={<MyItems/>}></Route>
 
         <Route path="/login" element={<Login/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       {/* <Footer/> */}

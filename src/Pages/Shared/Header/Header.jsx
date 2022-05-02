@@ -4,8 +4,12 @@ import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Incubator from '../../../Assets/Images/logo-2.png'
 import { Link } from "react-router-dom";
+import auth from "../../../Firebase/firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
   return (
     <>
       <Navbar className="shadow header" collapseOnSelect expand="lg">
@@ -25,7 +29,16 @@ const Header = () => {
               <Nav.Link as={Link} className="header-link" to="/manage-item">Manage Item</Nav.Link>
               <Nav.Link as={Link} className="header-link" to="/add-item">Add Item</Nav.Link>
               <Nav.Link as={Link} className="header-link" to="/my-items">My Items</Nav.Link>
-              <Nav.Link as={Link} className="header-link" to="/login">Login</Nav.Link>
+              
+              {/* <Nav.Link as={Link} className="header-link" to="/login">Login</Nav.Link> */}
+
+              {user ? (
+                <button className="sign-out-btn"  onClick={() => signOut(auth)}>Logout</button>
+              ) : (
+                <Nav.Link className="menu-link" as={Link} to="/login">
+                  Login
+                </Nav.Link>
+              )}
               
             </Nav>
 

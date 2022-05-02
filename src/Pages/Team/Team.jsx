@@ -1,5 +1,9 @@
 import React from 'react';
 import './Team.css';
+import Team1 from '../../Assets/Images/team-1.jpg';
+import Team2 from '../../Assets/Images/team-2.jpg';
+import Team3 from '../../Assets/Images/team-3.jpg';
+import Team4 from '../../Assets/Images/team-4.jpg';
 
 const Team = () => {
   return (
@@ -15,7 +19,7 @@ const Team = () => {
                 <div className="col-lg-3  col-md-6 d-flex align-items-stretch">
                     <div className="member">
                         <div className="member-img">
-                            <img className="img-fluid" src="./img/team-1.jpg" alt="team-1" />
+                            <img className="img-fluid" src={Team1} alt="team-1" />
                             <div className="social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook"></i></a>
@@ -33,7 +37,7 @@ const Team = () => {
                 <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div className="member">
                         <div className="member-img">
-                            <img className="img-fluid" src="./img/team-2.jpg" alt="team-2" />
+                            <img className="img-fluid" src={Team2} alt="team-2" />
                             <div className="social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook"></i></a>
@@ -51,7 +55,7 @@ const Team = () => {
                 <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div className="member">
                         <div className="member-img">
-                            <img className="img-fluid" src="./img/team-3.jpg" alt="team-3" />
+                            <img className="img-fluid" src={Team3} alt="team-3" />
                             <div className="social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook"></i></a>
@@ -69,7 +73,7 @@ const Team = () => {
                 <div className="col-lg-3 col-md-6 d-flex align-items-stretch">
                     <div className="member">
                         <div className="member-img">
-                            <img className="img-fluid" src="./img/team-4.jpg" alt="team-4" />
+                            <img className="img-fluid" src={Team4} alt="team-4" />
                             <div className="social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook"></i></a>

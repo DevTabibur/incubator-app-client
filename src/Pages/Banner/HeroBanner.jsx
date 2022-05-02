@@ -40,13 +40,14 @@ const HeroBanner = () => {
         // }}
         className="mySwiper pb-5"
       >
-        <SwiperSlide className="swiper-slider-parent">
-            <div className="slider-inner-info">
+        <SwiperSlide className="swiper-slider-parent shadow">
+        <div className="slider-inner-info ">
                 <h1 className="mb-3">GREAT DEALS ON <br /> HEADPHONES</h1>
-                <h4 className="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis velit commodi corrupti iste. Accusantium assumenda quidem, natus in voluptas tempore eaque qui commodi, quo reiciendis possimus libero dolore perferendis.</h4>
-                <button  className="slider-read-btn">FREE CONSULTATION</button>
+                <h4 className="mb-3">It is a dealership site. here you can find your favorite gadgets like headphones, clock, watch, and many more. We provide you best product based on your budget.</h4>
+                <button  className="slider-read-btn">VIEW MORE</button>
             </div>
             <img src={HeadPhones} alt="Slider1" />
+
 
         </SwiperSlide>
         

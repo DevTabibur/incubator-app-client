@@ -2,73 +2,73 @@
     {
         "id" : 1,
         "name" : "Prod",
-        "short-description" : "",
+        "description" : "Here is the modern prod gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 10,
         "image" : "https://i.ibb.co/J3fsJQr/prod-1-400x400.jpg"
     },
     {
         "id" : 2,
         "name" : "Analog Clock",
-        "short-description" : "",
+        "description" : "Here is the Analog Clock. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 6,
         "image" : "https://i.ibb.co/FmBM6bm/Simple-Analog-Clock-400x400.jpg"
     },
     {
         "id" : 3,
         "name" : "Smart Watch",
-        "short-description" : "",
+        "description" : "Here is the modern Smart Watch gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 8,
         "image" : "https://i.ibb.co/wzv9qSN/Black-Smartwatch-400x400.jpg"
     },
     {
         "id" : 4,
         "name" : "Wireless Router",
-        "short-description" : "",
+        "description" : "Here is the modern Wireless Router gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 15,
         "image" : "https://i.ibb.co/s9PDwMN/Home-Wireless-Router-400x400.jpg"
     },
     {
         "id" : 5,
         "name" : "Gaming Headset",
-        "short-description" : "",
+        "description" : "Here is the modern Gaming Headset gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 5,
         "image" : "https://i.ibb.co/Bzttr79/Gaming-Headset-400x400.jpg"
     },
     {
         "id" : 6,
         "name" : "FM Wireless Speaker",
-        "short-description" : "",
+        "description" : "Here is the modern FM Wireless Speaker gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" :11,
         "image" : "https://i.ibb.co/RYjfhCv/FM-Wirelss-Speakers-400x400.jpg"
     },
     {
         "id" : 7,
         "name" : "Modern Air Purifier",
-        "short-description" : "",
+        "description" : "Here is the Modern Air Purifier gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 8,
         "image" : "https://i.ibb.co/5rQnhPf/Modern-Air-Purifier-400x400.jpg"
     },
     {
         "id" : 8,
         "name" : "Modern Desk Lamp",
-        "short-description" : "",
+        "description" : "Here is the Modern Desk Lamp gadgets. you can afford it with your best budgets",
         "price" : 30,
         "supplier" : "Brod Van hel-sing",
-        "quantity" : 3,
+        "quantity" : 23,
         "image" : "https://i.ibb.co/MRFRf3R/Modern-desk-lamp-400x400.jpg"
     }
 ]

@@ -13,13 +13,15 @@ const Home = () => {
   return (
     <>
       {/* <HeroBanner/> */}
-      {/* <Container>
+
+      <Container>
         <Row>
           {products.map((product) => (
             <ShowProductHome key={product.id} product={product} />
           ))}
         </Row>
-      </Container> */}
+      </Container>
+
       {/* <ShopNow/> */}
       {/* <Team/> */}
     </>
@@ -27,17 +29,20 @@ const Home = () => {
 };
 
 const ShowProductHome = ({ product }) => {
+  console.log(product);
   return (
-    <Col className="d-flex justify-content-center align-items-center">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={product.image} />
+    <Col md={4} sm={12} lg={4} className="d-flex justify-content-center align-items-center g-4">
+      <Card className="shadow p-3 rounded" style={{ width: "22rem"}}>
+        <Card.Img className=" h-75 mx-auto" variant="top" src={product.image} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <h3>{product.supplier}</h3>
+          <h5>Price: ${product.price}</h5>
+          <h5>Quantity: {product.quantity}</h5>
+            <p>{product.description}</p>
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <button className="card-btn">SHOP NOW</button>
         </Card.Body>
       </Card>
     </Col>

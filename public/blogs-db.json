@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "author" : "Watson de Brune",
+        "release" : "26 March, 2020",
+        "title" : "Difference between javascript and nodejs?",
+        "image" : "https://cdn.educba.com/academy/wp-content/uploads/2018/07/Java-Script-vs-Node-JS-1.png",
+        "description" : "1. NodeJS : NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser(a) NodeJS is a Javascript runtime environment. (b)We can run Javascript outside the browser with the help of NodeJS. (c)It is mostly used on the server-side. (d)Nodejs does not have capability to add HTML tags. 2. JavaScript : Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script.(a)Javascript is a programming language that is used for writing scripts on the website. (b)Javascript can only be run in the browsers. (c)It is basically used on the client-side. (d)Javascript is capable enough to add HTML and play with the DOM. "
+    },
+    {
+        "id" : 2,
+        "author" : "Darren Samy",
+        "release" : "4 April, 2017",
+        "title" : "When should We use nodejs and when should We use mongodb?",
+        "image" : "https://kinsta.com/wp-content/uploads/2021/03/Nodejs-Architecture.png",
+        "description" : "Nodejs is a Javascript engine that you can write any application you want with (by programming in the Javascript language). It runs your Javascript code. Most commonly, it is used to build servers that can respond to web requests, though it can be used for lots of other types of code too.MongoDB is a database engine. Code within some application or server uses MongoDB to save, query or update data in a database. There are many web servers built with nodejs that will then use MongoDB for storing data.MongoDB offers an API library that runs within a Nodejs application to give you programmatic access to MongoDB so you can create databases and then add, query, update or delete data from the MongoDB database. MongoDB also has API libraries for other programming environments such as Python, Java, etc.These two technologies are for different parts of a typical web server system. You don't substitute one for the other. Instead, you can use them together.When should we use Nodejs? :Any project needs a programming environment and a runtime library that offers you basic programming tools/support and can compile and/or interpret your code. Nodejs is such as tool for the Javascript programming language. There are other similar tools for other languages such as Python, Java, PHP, C#, C++, Go, etc. So, if you want to write some kind of stand-alone program or server in Javascript, then you can use nodejs for it.When should we use MongoDB? :If your application needs the ability to persistently store data in a way that you can efficiently query or update it later, then you would typically use some form of database. There are dozens of popular databases. MongoDB is one such database. MariaDB, MySql, CouchDB, DynamoDB (on AWS), Postgres are examples of other databases. Different databases have different strengths (things they are best at) and different ways of using them so it's a whole different question to choose the right/best database for what you're doing."
+    },
+    {
+        "id" : 3,
+        "author" : "Ankit Pulkit",
+        "title" : "Differences between sql and nosql databases?",
+        "image" : "https://webteamconcept.com/wp-content/uploads/2021/11/SQL-Vs-NoSQL1.png",
+        "description" : "When choosing a modern database, one of the biggest decisions is picking a relational (SQL) or non-relational (NoSQL) data structure. While both are viable options, there are key differences between the two that users must keep in mind when making a decision. The five critical differences between SQL vs NoSQL are:1. SQL databases are relational, NoSQL databases are non-relational.2. SQL databases use structured query language and have a predefined schema.NoSQL databases have dynamic schemas for unstructured data.3.SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.4. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores.5. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON."
+    },
+    {
+        "id" : 4,
+        "author" : "Mr. Walli Ahmed",
+        "title" : "What is the purpose of jwt and how does it work?",
+        "image" : "https://developer.box.com/static/945025c576d15999372d76eca0b7c260/d2cc9/jwt-flow.png",
+        "description" : "JWT, or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.The JOSE (JSON Object Signing and Encryption) header contains the type of token — JWT in this case — and the signing algorithm.The payload contains the claims. This is displayed as a JSON string, usually containing no more than a dozen fields to keep the JWT compact. This information is typically used by the server to verify that the user has permission to perform the action they are requesting.There are no mandatory claims for a JWT, but overlaying standards may make claims mandatory. For example, when using JWT as bearer access token under OAuth2.0, iss, sub, aud, and exp must be present. some are more common than others. The signature ensures that the token hasn’t been altered. The party that creates the JWT signs the header and payload with a secret that is known to both the issuer and receiver, or with a private key known only to the sender. When the token is used, the receiving party verifies that the header and payload match the signature"
+    }
+]

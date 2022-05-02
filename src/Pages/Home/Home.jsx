@@ -21,7 +21,7 @@ const Home = () => {
         </Row>
       </Container> */}
       {/* <ShopNow/> */}
-      <Team/>
+      {/* <Team/> */}
     </>
   );
 };

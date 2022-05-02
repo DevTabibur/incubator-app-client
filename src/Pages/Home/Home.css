@@ -1,0 +1,26 @@
+.parent-col {
+  font-family: "Roboto Slab", serif;
+  color: #06113c;
+}
+.parent-col p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+.parent-col .card-btn {
+  color: #cc9544;
+  background-color: #06113c;
+  transition: 0.4s;
+  /* width: 100%;
+  display: flex; */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+font-weight: 600;
+}
+.parent-col .card-btn:hover {
+  color: #06113c;
+  background-color: #cc9544;
+}

@@ -8,6 +8,8 @@
 3. swiper
 4. React Router
 5. React Icons
+6. React Toastify
+7. React Firebase Hooks
 
 ## Features
 1. Primary-color : #06113C

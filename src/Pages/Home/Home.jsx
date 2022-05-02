@@ -3,6 +3,8 @@ import "./Home.css";
 import HeroBanner from "../Banner/HeroBanner";
 import { ProductContext } from "../../App";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import ShopNow from "../ShopNow/ShopNow";
+import Team from "../Team/Team";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
@@ -11,13 +13,15 @@ const Home = () => {
   return (
     <>
       {/* <HeroBanner/> */}
-      <Container>
+      {/* <Container>
         <Row>
           {products.map((product) => (
             <ShowProductHome key={product.id} product={product} />
           ))}
         </Row>
-      </Container>
+      </Container> */}
+      {/* <ShopNow/> */}
+      <Team/>
     </>
   );
 };

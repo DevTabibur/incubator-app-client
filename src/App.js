@@ -9,13 +9,17 @@ import Login from './Pages/Shared/Login/Login';
 import Inventory from './Pages/Inventory/Inventory';
 import { createContext } from 'react';
 import useProducts from './Pages/Hooks/useProducts';
+import Blog from './Pages/Blogs/Blog';
+import MyItems from './Pages/MyItems/MyItems';
+import ManageItem from './Pages/ManageItem/ManageItem';
+import AddItem from './Pages/AddItems/AddItem';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
 export const ProductContext = createContext([]);
 
 function App() {
-  
+
   const [products, setProducts] = useProducts();
 
   return (
@@ -24,7 +28,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
-        <Route path="/inventory" element={<Inventory/>}></Route>
+        <Route path="/blog" element={<Blog/>}></Route>
+        <Route path="/manage-item" element={<ManageItem/>}></Route>
+        <Route path="/add-item" element={<AddItem/>}></Route>
+
+        <Route path="/my-items" element={<MyItems/>}></Route>
+
         <Route path="/login" element={<Login/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>

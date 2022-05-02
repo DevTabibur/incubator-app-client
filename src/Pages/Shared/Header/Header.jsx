@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar className="shadow header" collapseOnSelect expand="lg">
 
         <Container>
 
-          <Navbar.Brand href="#home">
+          <Navbar.Brand as={Link} to="/">
             <img src={Incubator} alt="logo" />
           </Navbar.Brand>
           
@@ -21,8 +21,11 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
 
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/inventory">Inventory</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Nav.Link as={Link} className="header-link" to="/blog">Blog</Nav.Link>
+              <Nav.Link as={Link} className="header-link" to="/manage-item">Manage Item</Nav.Link>
+              <Nav.Link as={Link} className="header-link" to="/add-item">Add Item</Nav.Link>
+              <Nav.Link as={Link} className="header-link" to="/my-items">My Items</Nav.Link>
+              <Nav.Link as={Link} className="header-link" to="/login">Login</Nav.Link>
               
             </Nav>
 

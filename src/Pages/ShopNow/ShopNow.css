@@ -1,0 +1,22 @@
+.shop-now-for-less{
+    padding: 50px 0;
+}
+.parallax{}
+.parallax-overlay{
+    background-image: url("https://www.keydesign-themes.com/incubator/shop-classic/wp-content/uploads/sites/22/2016/11/parallax1-1-1.jpg");
+    transform: translate3d(0px, -30.7481px, 0px);
+    
+}
+.parallax .parallax-overlay, .with-overlay .parallax-overlay {
+    background-size: cover!important;
+}
+.parallax .parallax-overlay {
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    top: 0;
+    opacity: 1;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}

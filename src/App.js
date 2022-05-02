@@ -13,6 +13,7 @@ import Blog from './Pages/Blogs/Blog';
 import MyItems from './Pages/MyItems/MyItems';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import AddItem from './Pages/AddItems/AddItem';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
@@ -30,7 +31,14 @@ function App() {
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
         <Route path="/manage-item" element={<ManageItem/>}></Route>
-        <Route path="/add-item" element={<AddItem/>}></Route>
+
+        <Route path='/add-item' element={
+          <RequireAuth>
+            <AddItem/>
+          </RequireAuth>
+        }></Route>
+        
+        {/* <Route path="/add-item" element={<AddItem/>}></Route> */}
 
         <Route path="/my-items" element={<MyItems/>}></Route>
 

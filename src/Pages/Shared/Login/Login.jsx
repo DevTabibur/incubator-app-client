@@ -199,7 +199,7 @@ const Login = () => {
                 <div className="logo-wrapper w-100">
                   <button
                     className="google-auth"
-                    onClick={() => handleSignInWithGoogle()}
+                    onClick={() => signInWithGoogle()}
                   >
                     <img src={GoogleLogo} alt="google__logo" />
                     <p> Continue with Google </p>

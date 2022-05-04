@@ -12,8 +12,9 @@ const Home = () => {
   // console.log(sliceProducts);
   return (
     <>
-      <HeroBanner/>
+      {/* <HeroBanner /> */}
 
+      {/* products */}
       <Container className="py-5">
         <Row>
           {sliceProducts.map((product) => (
@@ -24,26 +25,33 @@ const Home = () => {
       </Container>
 
       {/* <ShopNow/> */}
-      <Team/>
+      {/* <Team/> */}
     </>
   );
 };
 
 const ShowProductHome = ({ product }) => {
-  console.log(product);
   return (
-    <Col md={4} sm={12} lg={4} className="d-flex justify-content-center align-items-center g-4">
-      <Card className="parent-col shadow p-3 rounded" style={{ width: "22rem"}}>
+    <Col
+      md={4}
+      sm={12}
+      lg={4}
+      className="d-flex justify-content-center align-items-center g-4"
+    >
+      <Card
+        className="parent-col shadow p-3 rounded"
+        style={{ width: "22rem" }}
+      >
         <Card.Img className=" h-75 mx-auto" variant="top" src={product.image} />
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>
-          <h5>Supplier: {product.supplier}</h5>
-          <h5>Price: ${product.price}</h5>
-          <h5>Quantity: {product.quantity}</h5>
+            <h5>Supplier: {product.supplier}</h5>
+            <h5>Price: ${product.price}</h5>
+            <h5>Quantity: {product.quantity}</h5>
             <p>{product.description}</p>
           </Card.Text>
-          <button className="card-btn">SHOP NOW</button>
+          <button className="card-btn">UPDATE</button>
         </Card.Body>
       </Card>
     </Col>

@@ -15,6 +15,7 @@ import ManageItem from './Pages/ManageItem/ManageItem';
 import AddItem from './Pages/AddItems/AddItem';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Register from './Pages/Shared/Register/Register';
+import SingleInventory from './Pages/SingleInventory/SingleInventory';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 
@@ -36,6 +37,11 @@ function App() {
         <Route path='/add-item' element={
           <RequireAuth>
             <AddItem/>
+          </RequireAuth>
+        }></Route>
+        <Route path='/inventory/:id' element={
+          <RequireAuth>
+            <SingleInventory/>
           </RequireAuth>
         }></Route>
 

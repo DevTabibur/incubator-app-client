@@ -40,6 +40,11 @@ const Footer = () => {
                   </span>
                   +88 01307-588223
                 </li>
+                
+              </div>
+
+              <div className="col-md-4">
+                <h5>Useful Links</h5>
                 <div className="footer-social-media d-flex">
                   
                   <div className="social-icon d-flex">
@@ -59,10 +64,6 @@ const Footer = () => {
                 </ul>
               </div>
                 </div>
-              </div>
-
-              <div className="col-md-4">
-                <h5>Useful Links</h5>
               </div>
 
               <div className="col-md-4 categories-menu">

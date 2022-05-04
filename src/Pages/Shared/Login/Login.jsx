@@ -118,7 +118,10 @@ const Login = () => {
       </div>
 
       <div className="login-bg">
+      
         <Container className="py-5">
+        <ToastContainer />
+
           <Row>
             <Col></Col>
             <Col md={4} lg={4} sm={4}>
@@ -129,7 +132,7 @@ const Login = () => {
 
                 <Form onSubmit={handleLogin}>
 
-                  <ToastContainer />
+                  {/* <ToastContainer /> */}
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
 

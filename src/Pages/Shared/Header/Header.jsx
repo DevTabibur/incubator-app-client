@@ -30,12 +30,10 @@ const Header = () => {
               <Nav.Link as={Link} className="header-link" to="/add-item">Add Item</Nav.Link>
               <Nav.Link as={Link} className="header-link" to="/my-items">My Items</Nav.Link>
               
-              {/* <Nav.Link as={Link} className="header-link" to="/login">Login</Nav.Link> */}
-
               {user ? (
-                <button className="sign-out-btn"  onClick={() => signOut(auth)}>Logout</button>
+                <button className="header-link sign-out-btn"  onClick={() => signOut(auth)}>Logout</button>
               ) : (
-                <Nav.Link className="menu-link" as={Link} to="/login">
+                <Nav.Link className="header-link" as={Link} to="/login">
                   Login
                 </Nav.Link>
               )}

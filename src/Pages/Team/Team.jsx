@@ -12,7 +12,7 @@ const Team = () => {
         <div className="container">
             <div className="section-title">
                 <h2>Team</h2>
-                <p className="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, assumenda mollitia praesentium excepturi iure neque earum? Corrupti, molestias dolorum.</p>
+                <p className="mb-0">Meet Our professional Partners!</p>
             </div>
             <div className="row">
 
@@ -28,7 +28,7 @@ const Team = () => {
                             </div>
                         </div>
                         <div className="member-info">
-                            <h4>Weather Hitw</h4>
+                            <h4>Johny Depp</h4>
                             <p>Assistant Director</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ const Team = () => {
                             </div>
                         </div>
                         <div className="member-info">
-                            <h4>Weather Hitw</h4>
+                            <h4>Amber Heard</h4>
                             <p>Assistant Director</p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const Team = () => {
                             </div>
                         </div>
                         <div className="member-info">
-                            <h4>Weather Hitw</h4>
+                            <h4>Michael Jackson</h4>
                             <p>Assistant Director</p>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ const Team = () => {
                             </div>
                         </div>
                         <div className="member-info">
-                            <h4>Weather Hitw</h4>
+                            <h4>Natalia Jesmin</h4>
                             <p>Assistant Director</p>
                         </div>
                     </div>

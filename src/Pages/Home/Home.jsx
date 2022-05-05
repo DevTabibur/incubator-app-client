@@ -19,7 +19,7 @@ const Home = () => {
       <Container className="py-5">
         <Row>
           {sliceProducts.map((product) => (
-            <ShowProductHome key={product.id} product={product} />
+            <ShowProductHome key={product._id} product={product} />
           ))}
           <Button className="mt-4 w-50 p-4 mx-auto shadow">Explore More</Button>
         </Row>
@@ -32,8 +32,8 @@ const Home = () => {
 };
 
 const ShowProductHome = ({ product }) => {
-  console.log(product);
   return (
+    <>
     <Col
       md={4}
       sm={12}
@@ -43,6 +43,7 @@ const ShowProductHome = ({ product }) => {
       <Card
         className="parent-col shadow p-3 rounded"
         style={{ width: "22rem" }}
+        
       >
         <Card.Img className=" h-75 mx-auto" variant="top" src={product.image} />
         <Card.Body>
@@ -57,6 +58,7 @@ const ShowProductHome = ({ product }) => {
         </Card.Body>
       </Card>
     </Col>
+    </>
   );
 };
 

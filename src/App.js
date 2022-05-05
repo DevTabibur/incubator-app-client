@@ -18,6 +18,10 @@ import Register from './Pages/Shared/Register/Register';
 import SingleInventory from './Pages/SingleInventory/SingleInventory';
 
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
+/*
+## COMPLETE TASK NO.
+1,2,3,4(last part baki),5(last baki),
+*/
 
 export const ProductContext = createContext([]);
 
@@ -39,7 +43,7 @@ function App() {
             <AddItem/>
           </RequireAuth>
         }></Route>
-        
+
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <SingleInventory/>

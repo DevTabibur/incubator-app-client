@@ -3,8 +3,10 @@ import { useParams } from 'react-router-dom';
 import './SingleInventory.css';
 
 const SingleInventory = () => {
-  const params = useParams();
-  console.log(params)
+  
+  const {id} = useParams();
+  console.log(id)
+
   return (
     <div>SingleInventory</div>
   )

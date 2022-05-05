@@ -39,6 +39,7 @@ function App() {
             <AddItem/>
           </RequireAuth>
         }></Route>
+        
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <SingleInventory/>

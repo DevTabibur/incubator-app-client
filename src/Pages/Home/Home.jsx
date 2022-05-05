@@ -5,6 +5,7 @@ import { ProductContext } from "../../App";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import ShopNow from "../ShopNow/ShopNow";
 import Team from "../Team/Team";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
@@ -31,6 +32,7 @@ const Home = () => {
 };
 
 const ShowProductHome = ({ product }) => {
+  console.log(product);
   return (
     <Col
       md={4}
@@ -51,7 +53,7 @@ const ShowProductHome = ({ product }) => {
             <h5>Quantity: {product.quantity}</h5>
             <p>{product.description}</p>
           </Card.Text>
-          <button className="card-btn">UPDATE</button>
+          <Link to={`/inventory/${product._id}`} className="card-btn">UPDATE</Link>
         </Card.Body>
       </Card>
     </Col>

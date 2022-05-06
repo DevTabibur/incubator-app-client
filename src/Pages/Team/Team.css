@@ -37,9 +37,6 @@
     position: relative;
     font-family: 'Roboto Slab', serif;
     font-weight: 600;
-
-
-    color: #06113C;
 }
 .section-title h2::after {
     content: "";

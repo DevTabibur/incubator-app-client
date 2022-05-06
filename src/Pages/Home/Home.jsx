@@ -5,8 +5,8 @@ import { ProductContext } from "../../App";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Team from "../Team/Team";
 import { Link } from "react-router-dom";
-import Map from "../Shared/Map/Map";
 import Service from "../Shared/Service/Service";
+import GoogleMap from "../Shared/GoogleMap/GoogleMap";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
@@ -14,11 +14,11 @@ const Home = () => {
   // console.log(sliceProducts);
   return (
     <>
-      {/* <HeroBanner /> */}
+      <HeroBanner />
       <Service/>
 
       {/* products */}
-      {/* <Container className="py-5">
+      <Container className="py-5">
       <div className="section-title">
                 <h2>Choose Your Products</h2>
                 <p className="mb-0">You can find the best gadgets ever!</p>
@@ -29,10 +29,10 @@ const Home = () => {
           ))}
           <Link className="mt-4 w-50 p-4 mx-auto shadow" to="/manage-inventory">Manage Inventories</Link>
         </Row>
-      </Container> */}
+      </Container>
 
-      {/* <Team/>
-      <Map/> */}
+      <Team/>
+      <GoogleMap/>
     </>
   );
 };

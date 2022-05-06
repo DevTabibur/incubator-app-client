@@ -3,67 +3,62 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* footer-top */
-.footer-top{
-    background-color: #262b3e;
+.footer{
+    background-color: #262b3e33;
 }
-.footer-top .social-icon{}
-.footer-top .social-icon ul{
+.footer h5{
+    color: #06113C;
+}
+.footer ul{
     padding-left: 0;
     margin: 0;
-    display: flex;
 }
-.footer-top .social-icon ul{
+.footer ul li{
     list-style: none;
-
-}
-.footer-top .social-icon ul .flex-icon{
-    background-color: #30364e;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 14px;
-    font-size: 0.875rem;
-    color: #fff;
-    padding: 10px;
-    margin-right: 40px;
-    display: block;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
-    transition: .4s;
-}
-.footer-top .social-icon ul .flex-icon:hover{
-    color: #30364e;
-    background-color: #fff;
-}
-.footer-top .mid-col-logo{
-    position: relative;
-    width: 100%;
-    /* height: 100%; */
-}
-.footer-top .mid-col-logo img{
-    position: relative;
-    width: 20%;
-}
-.footer-top .right-news-letter{}
-.footer-top .right-news-letter h3{
-    font-family: 'Roboto Slab', serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 4px;
     font-weight: 500;
-    font-size: 30px;
-    color: #fff;
 }
-
+.footer ul li span{
+    list-style: none;
+}
+.footer-social-media{}
+.footer-social-media .social-icon{}
+.footer-social-media .social-icon ul{
+    padding-left: 0;
+    position: relative;
+}
+.footer-social-media .social-icon ul li {
+    position: relative;
+    margin-right: 20px;
+    font-size: 25px;
+    margin-top: 20px;
+    transition: .4s;
+    background-color: #06113C;
+    color: #CC9544;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social-media .social-icon ul li:hover {
+    color: #06113C;
+    background-color: #CC9544;
+}
 
 /* footer bottom */
 .footer-bottom{
-    background-color: #000;
+    background-color: #06113cb1;
     color: var(--white);
     margin-bottom: -20px;
 }
 .copyright{
-    color: #fff;
+    color: #000;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 
 }
 

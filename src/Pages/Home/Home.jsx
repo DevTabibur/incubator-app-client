@@ -3,9 +3,9 @@ import "./Home.css";
 import HeroBanner from "../Banner/HeroBanner";
 import { ProductContext } from "../../App";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import ShopNow from "../ShopNow/ShopNow";
 import Team from "../Team/Team";
 import { Link } from "react-router-dom";
+import Map from "../Shared/Map/Map";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
@@ -13,7 +13,7 @@ const Home = () => {
   // console.log(sliceProducts);
   return (
     <>
-      {/* <HeroBanner /> */}
+      <HeroBanner />
 
       {/* products */}
       <Container className="py-5">
@@ -21,12 +21,12 @@ const Home = () => {
           {sliceProducts.map((product) => (
             <ShowProductHome key={product._id} product={product} />
           ))}
-          <Button className="mt-4 w-50 p-4 mx-auto shadow">Explore More</Button>
+          <Link className="mt-4 w-50 p-4 mx-auto shadow" to="/manage-inventory">Manage Inventories</Link>
         </Row>
       </Container>
 
-      {/* <ShopNow/> */}
-      {/* <Team/> */}
+      <Team/>
+      <Map/>
     </>
   );
 };

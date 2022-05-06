@@ -14,9 +14,9 @@ import SwiperCore from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import HeadPhones from '../../Assets/Images/Gaming-Headset.jpg';
-// import Slider2 from '../../../Assets/Images/slide-2.jpg'
-// import Slider3 from '../../../Assets/Images/slide-3.jpg'
-// import Slider4 from '../../../Assets/Images/slide-4.jpg'
+// import Slider2 from '../../../Assets/Images/slide-2.jpg';
+// import Slider3 from '../../../Assets/Images/slide-3.jpg';
+// import Slider4 from '../../../Assets/Images/slide-4.jpg';
 import { useNavigate } from "react-router-dom";
 
 const HeroBanner = () => {

@@ -24,7 +24,6 @@ const Blog = () => {
 };
 
 const ShowBlog = ({ blog }) => {
-  console.log(blog);
   return (
     <Col  md={6} sm={12} lg={6} className="g-4 blog-parent-col">
 

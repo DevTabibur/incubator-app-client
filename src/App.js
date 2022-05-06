@@ -36,7 +36,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
-        <Route path="/manage-item" element={<ManageItem/>}></Route>
+        <Route path="/manage-inventory" element={<ManageItem/>}></Route>
 
         <Route path='/add-item' element={
           <RequireAuth>
@@ -50,7 +50,6 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        {/* <Route path="/add-item" element={<AddItem/>}></Route> */}
 
         <Route path="/my-items" element={<MyItems/>}></Route>
 
@@ -58,7 +57,7 @@ function App() {
         <Route path="/register" element={<Register/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
 
     </ProductContext.Provider>
   );

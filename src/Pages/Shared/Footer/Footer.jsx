@@ -17,72 +17,60 @@ const Footer = () => {
         {/* footer */}
         <footer id="footer" className="footer py-5">
           <div className="container">
-            <div className="row">
+            <div className="row g-4">
               <div className="col-md-4">
-                <h3>
+                <div className="footer-logo">
                   <img src={FooterLogo} alt="footer-logo" />
-                </h3>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-location-dot"></i>
-                  </span>
-                  84 Main Rd E, St Albans VIC 3021, Australia
-                </li>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-envelope"></i>
-                  </span>
-                  abc@gmail.com
-                </li>
-                <li>
-                  <span>
-                    <i className="fa-solid fa-phone"></i>
-                  </span>
-                  +88 01307-588223
-                </li>
-                
-              </div>
-
-              <div className="col-md-4">
-                <h5>Useful Links</h5>
-                <div className="footer-social-media d-flex">
-                  
-                  <div className="social-icon d-flex">
+                </div>
                 <ul>
                   <li>
-                    <BsFacebook className="flex-icon" />
+                    <span>
+                      <i className="fa-solid fa-location-dot"></i>
+                    </span>
+                    84 Main Rd E, St Albans VIC 3021, Australia
                   </li>
                   <li>
-                    <BsTwitter className="flex-icon" />
+                    <span>
+                      <i className="fa-solid fa-envelope"></i>
+                    </span>
+                    abc@gmail.com
                   </li>
                   <li>
-                    <ImWhatsapp className="flex-icon" />
-                  </li>
-                  <li>
-                    <BsGithub className="flex-icon" />
+                    <span>
+                      <i className="fa-solid fa-phone"></i>
+                    </span>
+                    +88 01307-588223
                   </li>
                 </ul>
               </div>
+
+              <div className="col-md-4">
+                <h5>Useful Social Links</h5>
+                <div className="footer-social-media">
+                  <div className="social-icon">
+                    <ul className="d-flex">
+                      <li>
+                        <BsFacebook className="flex-icon" />
+                      </li>
+                      <li>
+                        <BsTwitter className="flex-icon" />
+                      </li>
+                      <li>
+                        <ImWhatsapp className="flex-icon" />
+                      </li>
+                      <li>
+                        <BsGithub className="flex-icon" />
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
               <div className="col-md-4 categories-menu">
-                <h5>Newsletter Signup</h5>
-                <p>
-                  Subscribe to our newsletter and get 10% off your first
-                  purchase
-                </p>
-                <form className="d-flex">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Enter your email"
-                    aria-label="Search"
-                  />
-                  <button className="btn btn-outline-success" type="submit">
-                    SUBSCRIBE
-                  </button>
-                </form>
+                <h5>Find US</h5>
+                <div className="footer-map">
+                  here is footer map
+                </div>
               </div>
             </div>
           </div>

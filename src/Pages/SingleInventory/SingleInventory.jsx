@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./SingleInventory.css";
 
 const SingleInventory = () => {
@@ -17,21 +18,29 @@ const SingleInventory = () => {
   }, []);
 
   const handleDelivered = (id) =>{
+      const quantity = singleProduct.quantity;
+      if (quantity > 0) {
+          const quantityObj = { quantity };
+          const url =`http://localhost:5000/data/${id}`;
+          fetch(url, {
+              method: 'PUT',
+              headers: {
+                  'content-type': 'application/json'
+              },
+              body: JSON.stringify(quantityObj)
+          })
+              .then(res => res.json())
+              .then(data => {
+                  console.log('success', data)
 
-      // const updateQuantity = req.body.quantity;
+                     toast('item restock successfully')
+              })
+      } else {
+          alert('Stock out')
+      }
 
-    // for getting id's info
-    const url = `http://localhost:5000/data/${id}`;
-    // const [ info, setInfo] = useState({});
-
-    // fetch(url, {
-    //   method: "PUT",
-    //   headers : {
-    //     'content-type' : 'application/json'
-    //   },
-    //   body: JSON.stringify()
-    // })
   }
+ 
 
   return (
     <div className="single-product-details">

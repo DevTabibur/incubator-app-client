@@ -20,9 +20,9 @@ import SingleInventory from './Pages/SingleInventory/SingleInventory';
 // ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
 /*
 ## COMPLETE TASK NO.
-1,2,3,4(last part baki),5(last baki),
+1,2,3,4(last part baki),5(last baki), 12, 13, 14
 ## BONUS TASK NO.
-1(toast is not worked), 2(toast is not worked), 3, 4, 5, 6, 7, 9,  
+1, 2, 3, 4, 5, 6, 7, 9,  
 */
 
 export const ProductContext = createContext([]);

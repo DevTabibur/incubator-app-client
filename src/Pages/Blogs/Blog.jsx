@@ -6,7 +6,7 @@ const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("blogs-db.json")
+    fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -15,7 +15,7 @@ const Blog = () => {
       <Container className="py-4">
         <Row>
           {blogs.map((blog) => (
-            <ShowBlog key={blog.id} blog={blog} />
+            <ShowBlog key={blog._id} blog={blog} />
           ))}
         </Row>
       </Container>

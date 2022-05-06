@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
 import HeroBanner from "../Banner/HeroBanner";
 import { ProductContext } from "../../App";
@@ -10,6 +10,17 @@ import GoogleMap from "../Shared/GoogleMap/GoogleMap";
 import Spinner from "../Shared/Spinner/Spinner";
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+    const url = ``
+    fetch(url)
+      .then(res => res.json())
+      .then(data =>
+        setLoading(false))
+  }, [])
+
   const [products, setProducts] = useContext(ProductContext);
   const sliceProducts = products.slice(0, 6);
 

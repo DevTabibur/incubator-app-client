@@ -1,6 +1,5 @@
 [
     {
-        "id" : 1,
         "name" : "Prod",
         "description" : "Here is the modern prod gadgets. you can afford it with your best budgets",
         "price" : 50,
@@ -9,7 +8,6 @@
         "image" : "https://i.ibb.co/J3fsJQr/prod-1-400x400.jpg"
     },
     {
-        "id" : 2,
         "name" : "Analog Clock",
         "description" : "Here is the Analog Clock. you can afford it with your best budgets",
         "price" : 30,
@@ -18,7 +16,6 @@
         "image" : "https://i.ibb.co/FmBM6bm/Simple-Analog-Clock-400x400.jpg"
     },
     {
-        "id" : 3,
         "name" : "Smart Watch",
         "description" : "Here is the modern Smart Watch gadgets. you can afford it with your best budgets",
         "price" : 100,
@@ -27,7 +24,6 @@
         "image" : "https://i.ibb.co/wzv9qSN/Black-Smartwatch-400x400.jpg"
     },
     {
-        "id" : 4,
         "name" : "Wireless Router",
         "description" : "Here is the modern Wireless Router gadgets. you can afford it with your best budgets",
         "price" : 120,
@@ -36,7 +32,6 @@
         "image" : "https://i.ibb.co/s9PDwMN/Home-Wireless-Router-400x400.jpg"
     },
     {
-        "id" : 5,
         "name" : "Gaming Headset",
         "description" : "Here is the modern Gaming Headset gadgets. you can afford it with your best budgets",
         "price" : 56,
@@ -45,7 +40,6 @@
         "image" : "https://i.ibb.co/Bzttr79/Gaming-Headset-400x400.jpg"
     },
     {
-        "id" : 6,
         "name" : "FM Wireless Speaker",
         "description" : "Here is the modern FM Wireless Speaker gadgets. you can afford it with your best budgets",
         "price" : 99,
@@ -54,7 +48,6 @@
         "image" : "https://i.ibb.co/RYjfhCv/FM-Wirelss-Speakers-400x400.jpg"
     },
     {
-        "id" : 7,
         "name" : "Modern Air Purifier",
         "description" : "Here is the Modern Air Purifier gadgets. you can afford it with your best budgets",
         "price" : 300,
@@ -63,7 +56,6 @@
         "image" : "https://i.ibb.co/5rQnhPf/Modern-Air-Purifier-400x400.jpg"
     },
     {
-        "id" : 8,
         "name" : "Modern Desk Lamp",
         "description" : "Here is the Modern Desk Lamp gadgets. you can afford it with your best budgets",
         "price" : 70,

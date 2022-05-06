@@ -15,6 +15,9 @@
 ## Features
 1. Primary-color : #06113C
 2. Secondary-color : #CC9544
+3. Team section has another level of Functionality and CSS styled
+4. Google Map
+5. Swiper js slider is worked
 
 ## Short-Description
 To build this site I'm using React, Node, Bootstrap , MongoDB and many more. This is my first full-stack website that i've ever made in my life.There is RequireAuth functionality installed and worked. Private Route and Server API are using here.

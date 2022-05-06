@@ -51,12 +51,12 @@
 
 /* footer bottom */
 .footer-bottom{
-    background-color: #06113cb1;
+    background-color: #000;
     color: var(--white);
     margin-bottom: -20px;
 }
 .copyright{
-    color: #000;
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 

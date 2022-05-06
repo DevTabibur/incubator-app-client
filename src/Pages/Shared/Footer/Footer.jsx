@@ -18,7 +18,7 @@ const Footer = () => {
         <footer id="footer" className="footer py-5">
           <div className="container">
             <div className="row g-4">
-              <div className="col-md-4">
+              <div className="col-md-6">
                 <div className="footer-logo">
                   <img src={FooterLogo} alt="footer-logo" />
                 </div>
@@ -30,21 +30,15 @@ const Footer = () => {
                     84 Main Rd E, St Albans VIC 3021, Australia
                   </li>
                   <li>
-                    <span>
-                      <i className="fa-solid fa-envelope"></i>
-                    </span>
                     abc@gmail.com
                   </li>
                   <li>
-                    <span>
-                      <i className="fa-solid fa-phone"></i>
-                    </span>
                     +88 01307-588223
                   </li>
                 </ul>
               </div>
 
-              <div className="col-md-4">
+              <div className="col-md-6">
                 <h5>Useful Social Links</h5>
                 <div className="footer-social-media">
                   <div className="social-icon">
@@ -63,13 +57,6 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-
-              <div className="col-md-4 categories-menu">
-                <h5>Find US</h5>
-                <div className="footer-map">
-                  here is footer map
                 </div>
               </div>
             </div>

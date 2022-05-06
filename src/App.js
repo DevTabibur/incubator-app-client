@@ -11,7 +11,7 @@ import { createContext } from 'react';
 import useProducts from './Pages/Hooks/useProducts';
 import Blog from './Pages/Blogs/Blog';
 import MyItems from './Pages/MyItems/MyItems';
-import ManageItem from './Pages/ManageItem/ManageItem';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import AddItem from './Pages/AddItems/AddItem';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Register from './Pages/Shared/Register/Register';
@@ -22,7 +22,7 @@ import SingleInventory from './Pages/SingleInventory/SingleInventory';
 ## COMPLETE TASK NO.
 1,2,3,4(last part baki),5(last baki),
 ## BONUS TASK NO.
-1, 2, 3, 4, 
+1(toast is not worked), 2(toast is not worked), 3, 4, 5, 6, 7, 
 */
 
 export const ProductContext = createContext([]);
@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
-        <Route path="/manage-inventory" element={<ManageItem/>}></Route>
+        <Route path="/manage-inventory" element={<ManageInventory/>}></Route>
 
         <Route path='/add-item' element={
           <RequireAuth>

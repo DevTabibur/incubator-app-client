@@ -7,13 +7,15 @@ import Team from "../Team/Team";
 import { Link } from "react-router-dom";
 import Service from "../Shared/Service/Service";
 import GoogleMap from "../Shared/GoogleMap/GoogleMap";
+import Spinner from "../Shared/Spinner/Spinner";
 
 const Home = () => {
   const [products, setProducts] = useContext(ProductContext);
   const sliceProducts = products.slice(0, 6);
-  // console.log(sliceProducts);
+
   return (
-    <>
+    <div>
+    <Spinner/>
       <HeroBanner />
       <Service/>
 
@@ -33,7 +35,7 @@ const Home = () => {
 
       <Team/>
       <GoogleMap/>
-    </>
+    </div>
   );
 };
 

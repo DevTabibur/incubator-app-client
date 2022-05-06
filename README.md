@@ -11,6 +11,7 @@
 6. React Toastify
 7. Firebase
 8. React Firebase Hooks
+9. React Spinner
 
 ## Features
 1. Primary-color : #06113C

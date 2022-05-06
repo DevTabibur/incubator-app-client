@@ -32,8 +32,8 @@ const Header = () => {
               </Nav.Link>
 
               {user ? (
-                <Nav.Link as={Link} className="header-link" to="/manage-item">
-                  Manage Item
+                <Nav.Link as={Link} className="header-link" to="/manage-inventory">
+                  Manage Inventory
                 </Nav.Link>
               ) : (
                 <Nav.Link

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import GoogleLogo from '../../../Assets/Images/google.svg'
 import auth from '../../../Firebase/firebase.init';
@@ -120,7 +121,6 @@ const Login = () => {
       <div className="login-bg">
       
         <Container className="py-5">
-        <ToastContainer />
 
           <Row>
             <Col></Col>
@@ -203,7 +203,10 @@ const Login = () => {
               </div>
             </Col>
             <Col></Col>
+        <ToastContainer />
+
           </Row>
+
         </Container>
       </div>
 

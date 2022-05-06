@@ -21,6 +21,8 @@ import SingleInventory from './Pages/SingleInventory/SingleInventory';
 /*
 ## COMPLETE TASK NO.
 1,2,3,4(last part baki),5(last baki),
+## BONUS TASK NO.
+1, 2, 3, 4, 
 */
 
 export const ProductContext = createContext([]);

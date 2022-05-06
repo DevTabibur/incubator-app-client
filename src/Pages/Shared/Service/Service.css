@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.box{
+    position: relative;
+    /* width: 100%;
+    height: 100%; */
+    border: 1px solid #CC9544;
+    text-align: center;
+}
+.box .icon-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.box .icon-box .service-icon{
+    height: 80px;
+    width: 80px;
+    box-shadow: 1px 1px 29px 0px rgba(204,149,68,0.3);
+    border-radius: 50%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding: 15px;
+    color: #CC9544;
+    background-color: #fff;
+}
+.box .box-info{}
+.box .box-info .box-heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #06113C;
+    font-size: 20px;
+}
+.box .box-info p{
+    font-family: 'Montserrat', sans-serif;
+font-weight: 400;
+font-size:15px;
+}

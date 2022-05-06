@@ -35,6 +35,11 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+
+
+    color: #06113C;
 }
 .section-title h2::after {
     content: "";
@@ -45,6 +50,11 @@
     background: #CC9544;
     bottom: 0;
     left: calc(50% - 25px);
+}
+.section-title p{
+    font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+font-size: 15px;
 }
 .member {
     margin-bottom: 20px;

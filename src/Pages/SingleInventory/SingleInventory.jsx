@@ -59,7 +59,7 @@ const SingleInventory = () => {
             <Col md={6} lg={6} sm={12} className="left-column">
               <div className="product-img d-flex justify-content-center align-items-center">
                 <img
-                  className="d-flex justify-content-center align-items-center rounded"
+                  className="w-75 rounded"
                   src={singleProduct.image}
                   alt="product__img"
                 />

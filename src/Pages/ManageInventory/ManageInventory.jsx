@@ -8,7 +8,37 @@ import './ManageInventory.css';
 
 const ManageInventory = () => {
   const [products, setProducts] = useContext(ProductContext);
-  // console.log(products);
+
+  // useEffect(() =>{
+  //   fetch('http://localhost:5000/data')
+  //   .then(res=>res.json())
+  //   .then(data => {
+  //     setProducts(data)
+  //     // console.log('data', data);
+  //   });
+  // }, [])
+
+
+  const handleDelete = id =>{
+    const proceed = window.confirm("are you want to delete?")
+
+    if(proceed){
+      const url = `http://localhost:5000/data/${id}`
+      fetch(url, {
+        method: "DELETE"
+      })
+      .then(res=>res.json())
+      .then(data=> {
+        console.log(data)
+        if(data.deletedCount > 0){
+          const remaining = products.filter(product => product._id !== id);
+          setProducts(remaining);
+        }
+      })
+
+    }
+
+  }
 
   return (
     <>
@@ -19,7 +49,7 @@ const ManageInventory = () => {
             </div>
         <Row>
           {products.map((product) => (
-            <DeletedPD key={product._id} product={product} />
+            <DeletedPD key={product._id} product={product} handleDelete={handleDelete} />
           ))}
           <Link to="/add-item">ADD NEW ITEM</Link>
         </Row>

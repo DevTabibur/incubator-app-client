@@ -2,40 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
 import './DeletedPD.css';
 
-const DeletedPD = ({product}) => {
+const DeletedPD = ({product, handleDelete}) => {
 
     const [users, setUsers] = useState([]);
 
-  useEffect(() =>{
-    fetch('http://localhost:5000/data')
-    .then(res=>res.json())
-    .then(data => {
-      setUsers(data)
-      // console.log('data', data);
-    });
-  }, [])
-
-
-  const handleDelete = id =>{
-    const proceed = window.confirm("are you want to delete?")
-
-    if(proceed){
-      const url = `http://localhost:5000/data/${id}`
-      fetch(url, {
-        method: "DELETE"
-      })
-      .then(res=>res.json())
-      .then(data=> {
-        console.log(data)
-        if(data.deletedCount > 0){
-          const remaining = users.filter(user => user._id !== id);
-          setUsers(remaining);
-        }
-      })
-
-    }
-
-  }
+  
 
   return (
     <>

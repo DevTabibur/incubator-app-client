@@ -25,7 +25,7 @@ const Home = () => {
   const sliceProducts = products.slice(0, 6);
 
   return (
-    <div>
+    <>
     <Spinner/>
       <HeroBanner />
       <Service/>
@@ -40,13 +40,13 @@ const Home = () => {
           {sliceProducts.map((product) => (
             <ShowProductHome key={product._id} product={product} />
           ))}
-          <Link className="mt-4 w-50 p-4 mx-auto shadow" to="/manage-inventory">Manage Inventories</Link>
+          <Link className="mt-4 w-50 mx-auto manage-inventory-btn" to="/manage-inventory">Manage Inventories</Link>
         </Row>
       </Container>
 
       <Team/>
       <GoogleMap/>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,89 @@
+.single-product-details {
+    background-color: rgba(211, 211, 211, 0.087);
+}
+.single-product-details h2 {
+}
+.product-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.product-img img {
+}
+.single-product-details .right-column {
+}
+.single-product-details .right-column .product-info {
+  color: #06113c;
+}
+.single-product-details .right-column .product-info h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #06113c;
+}
+.single-product-details .right-column .product-info h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.single-product-details .right-column .product-info p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.single-product-details .right-column .product-info h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.single-product-details .right-column .product-info .delivered-btn {
+  border: none;
+  padding: 12px 40px;
+  border-radius: 5px;
+  margin-top: 25px;
+  background-color: #06113c;
+  color: #cc9544;
+  transition: 0.4s;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+
+}
+.single-product-details .right-column .product-info .delivered-btn:hover {
+  color: #06113c;
+  background-color: #cc9544;
+}
+
+
+/* form */
+.restock-form{
+    background-color: #CC9544;
+    border-radius: 5px;
+    padding: 20px;
+}
+.restock-form label h4{
+    font-family: 'Poppins', sans-serif;
+font-weight: 500;
+color: #06113C;
+}
+.restock-form input{
+    padding: 12px 30px;
+    
+}
+.restock-form .submit-btn {
+    margin-top: 5px;
+    padding: 10px 30px;
+    border: none;
+    background: no-repeat;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    background-color: #06113C;
+color: #CC9544;
+transition: .4s;
+border: 1px solid #06113C;
+
+
+}
+.restock-form .submit-btn:hover {
+    border: 1px solid #06113C;
+    color: #06113C;
+    background-color: #CC9544;
+
+}

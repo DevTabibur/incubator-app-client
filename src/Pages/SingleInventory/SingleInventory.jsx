@@ -1,15 +1,17 @@
 // @ts-nocheck
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Col, Container, Placeholder, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./SingleInventory.css";
 import { useForm } from "react-hook-form";
+import { ProductContext } from "../../App";
 
 const SingleInventory = () => {
   const { id } = useParams();
 
   const [singleProduct, setSingleProduct] = useState({});
+  // const [products, setProducts] = useContext(ProductContext);
 
   useEffect(() => {
     const url = `http://localhost:5000/data/${id}`;
@@ -32,7 +34,7 @@ const SingleInventory = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          setSingleProduct(data);
           toast.success("item restock successfully");
         });
     } else {
@@ -77,7 +79,7 @@ const SingleInventory = () => {
                 <h3>${singleProduct.price}</h3>
                 <h5>Quantity: {singleProduct.quantity}</h5>
                 <h5>Supplier: {singleProduct.supplier}</h5>
-                <p>{singleProduct.description}</p>
+                <p>{singleProduct.singleProduct}</p>
 
                 <button
                   className="delivered-btn"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import './AddItem.css';
 
 const AddItem = () => {
@@ -30,16 +31,29 @@ const AddItem = () => {
 
 
   return (
-    <div>
-      <h2>Restock the Items</h2>
-      <form onSubmit={handleForm}>
-        <input type="text" placeholder='name' name='fname' />
-        <br />
-        <input type="email" placeholder='Email' name='email' />
-        <br />
-        <input type="submit" value="SUBMIT" />
-      </form>
-    </div>
+    <>
+    <Container className='py-5'>
+    <div className="section-title mb-4">
+            <h2>Add Your Item</h2>
+            <p className="mb-0">You can also add your own product here.</p>
+          </div>
+      <Row>
+        <Col>
+        <form>
+          <label htmlFor=""></label>
+        </form>
+        {/* <form>
+     <label>First name:</label>
+     <input type="text" id="fname" name="fname">
+     <label>Last name:</label><br>
+      <input type="text" id="lname" name="lname">
+   </form> */}
+        </Col>
+      </Row>
+    </Container>
+      
+      
+    </>
   )
 }
 

@@ -22,49 +22,31 @@ const Header = () => {
 
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-
               <Nav.Link as={Link} className="header-link" to="/home">
                 Home
               </Nav.Link>
-              
+
               <Nav.Link as={Link} className="header-link" to="/blog">
                 Blog
               </Nav.Link>
 
-              {user ? (
-                <Nav.Link as={Link} className="header-link" to="/manage-inventory">
-                  Manage Inventory
-                </Nav.Link>
-              ) : (
-                <Nav.Link
-                  className="header-link"
-                  as={Link}
-                  to="/login"
-                ></Nav.Link>
-              )}
-
-              {user ? (
-                <Nav.Link as={Link} className="header-link" to="/add-item">
-                  Add Item
-                </Nav.Link>
-              ) : (
-                <Nav.Link
-                  className="header-link"
-                  as={Link}
-                  to="/login"
-                ></Nav.Link>
-              )}
-
-              {user ? (
-                <Nav.Link as={Link} className="header-link" to="/my-items">
-                  My Items
-                </Nav.Link>
-              ) : (
-                <Nav.Link
-                  className="header-link"
-                  as={Link}
-                  to="/login"
-                ></Nav.Link>
+              {user && (
+                <>
+                  {" "}
+                  <Nav.Link
+                    as={Link}
+                    className="header-link"
+                    to="/manage-inventory"
+                  >
+                    Manage Inventory
+                  </Nav.Link>
+                  <Nav.Link as={Link} className="header-link" to="/add-item">
+                    Add Item
+                  </Nav.Link>
+                  <Nav.Link as={Link} className="header-link" to="/my-items">
+                    My Items
+                  </Nav.Link>
+                </>
               )}
 
               {user ? (
@@ -86,5 +68,7 @@ const Header = () => {
     </>
   );
 };
+
+
 
 export default Header;

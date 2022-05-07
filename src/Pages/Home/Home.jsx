@@ -23,6 +23,7 @@ const Home = () => {
 
   const [products, setProducts] = useContext(ProductContext);
   const sliceProducts = products.slice(0, 6);
+ const haveProduct = sliceProducts[0]._id;
 
   return (
     <>
@@ -31,7 +32,7 @@ const Home = () => {
       <Service/>
 
       {/* products */}
-      {products._id &&
+      {haveProduct ?
       <Container className="py-5">
       <div className="section-title">
                 <h2>Choose Your Products</h2>
@@ -43,7 +44,7 @@ const Home = () => {
           ))}
            <Link className="mt-4 mx-auto manage-inventory-btn" to="/manage-inventory">Manage Inventories</Link>
         </Row>
-      </Container>}
+      </Container> : "No Products Here. Please Add Some!"}
 
       <Team/>
       <GoogleMap/>

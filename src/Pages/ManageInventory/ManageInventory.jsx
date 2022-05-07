@@ -42,7 +42,7 @@ const ManageInventory = () => {
           {products.map((product) => (
             <DeletedPD key={product._id} product={product} handleDelete={handleDelete} />
           ))}
-          <Link to="/add-item">ADD NEW ITEM</Link>
+          <Link to="/add-item" className='add-item-btn my-5 py-3'>ADD NEW ITEM</Link>
         </Row>
       </Container>
       

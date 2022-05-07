@@ -1,0 +1,19 @@
+.add-item-btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #06113c;
+    color: #cc9544;
+    transition: 0.4s;
+    width: 80%;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px;
+    margin: 0 auto;
+}
+.add-item-btn:hover {
+  color: #06113c;
+  background-color: #cc9544;
+}

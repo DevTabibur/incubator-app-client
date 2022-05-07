@@ -31,6 +31,7 @@ const Home = () => {
       <Service/>
 
       {/* products */}
+      {products._id &&
       <Container className="py-5">
       <div className="section-title">
                 <h2>Choose Your Products</h2>
@@ -40,9 +41,9 @@ const Home = () => {
           {sliceProducts.map((product) => (
             <ShowProductHome key={product._id} product={product} />
           ))}
-          <Link className="mt-4 mx-auto manage-inventory-btn" to="/manage-inventory">Manage Inventories</Link>
+           <Link className="mt-4 mx-auto manage-inventory-btn" to="/manage-inventory">Manage Inventories</Link>
         </Row>
-      </Container>
+      </Container>}
 
       <Team/>
       <GoogleMap/>

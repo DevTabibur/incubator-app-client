@@ -9,15 +9,6 @@ import './ManageInventory.css';
 const ManageInventory = () => {
   const [products, setProducts] = useContext(ProductContext);
 
-  // useEffect(() =>{
-  //   fetch('http://localhost:5000/data')
-  //   .then(res=>res.json())
-  //   .then(data => {
-  //     setProducts(data)
-  //     // console.log('data', data);
-  //   });
-  // }, [])
-
 
   const handleDelete = id =>{
     const proceed = window.confirm("are you want to delete?")

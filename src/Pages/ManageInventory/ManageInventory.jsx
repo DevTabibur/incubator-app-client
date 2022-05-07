@@ -169,8 +169,6 @@
 //   )
 // }
 
-// export default ManageInventory;
-
 
 import React from 'react'
 
@@ -179,5 +177,5 @@ const ManageInventory = () => {
     <div>ManageInventory</div>
   )
 }
+export default ManageInventory;
 
-export default ManageInventory

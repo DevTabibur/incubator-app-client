@@ -4,7 +4,9 @@ import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import auth from "../../../Firebase/firebase.init";
 import "./Register.css";
 
@@ -111,6 +113,7 @@ const Register = () => {
       </div>
 
       <div className="login-bg">
+      <ToastContainer/>
         <Container className="py-5">
           <Row>
             <Col></Col>

@@ -10,8 +10,9 @@
   width: 100%;
   /* min-width: 300px; */
 }
+/*
 .mySwiper .swiper-slider-parent::before {
-  /* background-color: rgba(0, 0, 0, 0.35); */
+  background-color: rgba(0, 0, 0, 0.35);
   background-color: #274c7a23;
   bottom: 0;
   content: "";
@@ -23,6 +24,7 @@
   z-index: 1;
   border-radius: 0 0 5px 5px;
 }
+*/
 .mySwiper .swiper-slider-parent img {
   display: block;
   width: 100%;
@@ -61,7 +63,7 @@
   margin: 15px 0;
   font-family: "Montserrat", sans-serif;
   text-transform: lowercase;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 .slider-inner-info .slider-read-btn {
@@ -108,17 +110,11 @@
   .slider-inner-info h1 {
     font-size: 25px;
     font-family: "Roboto Slab", serif;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 40px;
   }
   .slider-inner-info h4 {
-    font-size: 18px;
-    margin: 15px 0;
-    margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
-    text-transform: lowercase;
-    font-weight: 600;
-    letter-spacing: 1px;
+     display: none;
   }
 }
 
@@ -148,7 +144,7 @@
   .slider-inner-info h1 {
     font-size: 25px;
     font-family: "Roboto Slab", serif;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 40px;
   }
   .slider-inner-info h4 {
@@ -157,7 +153,7 @@
     margin-bottom: 0;
     font-family: "Montserrat", sans-serif;
     text-transform: lowercase;
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: 1px;
   }
 }

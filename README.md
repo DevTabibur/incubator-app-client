@@ -1,6 +1,7 @@
 # Incubator Inventory Website
 
 [Live Website Link](https://github.com/facebook/create-react-app).
+[stackOverFlow Questions](https://stackoverflow.com/questions/72157518/why-im-getting-react-backend-validatedomnesting-error-how-am-i-suppose-to-know).
 
 ## Technologies
 1. React
@@ -11,7 +12,7 @@
 6. React Toastify
 7. Firebase
 8. React Firebase Hooks
-9. React Spinner
+9. React Spinners
 
 ## Features
 1. Primary-color : #06113C

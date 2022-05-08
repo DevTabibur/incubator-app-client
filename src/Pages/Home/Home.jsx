@@ -7,26 +7,25 @@ import Team from "../Team/Team";
 import { Link } from "react-router-dom";
 import Service from "../Shared/Service/Service";
 import GoogleMap from "../Shared/GoogleMap/GoogleMap";
-import Spinner from "../Shared/Spinner/Spinner";
+import SpinnerLoader from "../SpinnerLoader/SpinnerLoader";
 
 const Home = () => {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true)
-    const url = ``
-    fetch(url)
-      .then(res => res.json())
-      .then(data =>
-        setLoading(false))
-  }, [])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   const url = `http://localhost:5000/data`
+  //   fetch(url)
+  //     .then(res => res.json())
+  //     .then(data =>
+  //       setLoading(false))
+  // }, [])
 
   const [products, setProducts] = useContext(ProductContext);
   const sliceProducts = products.slice(0, 6);
 
   return (
     <>
-    <Spinner/>
       <HeroBanner />
       <Service/>
 
@@ -53,7 +52,7 @@ const Home = () => {
 const ShowProductHome = ({ product }) => {
   return (
     <>
-    <Col
+      <Col
       md={4}
       sm={12}
       lg={4}
@@ -77,6 +76,7 @@ const ShowProductHome = ({ product }) => {
         </Card.Body>
       </Card>
     </Col>
+    
     </>
   );
 };

@@ -22,7 +22,7 @@ import SingleInventory from './Pages/SingleInventory/SingleInventory';
 ## COMPLETE TASK NO.
 1, 2, 3, 4, 5(id showed baki + last baki), 6(last baki), 7, 8, 9, 10, 11(full baki)  12, 13, 14
 ## BONUS TASK NO.
-1, 2, 3, 4, 5, 6, 7, 9,  
+1, 2, 3, 4, 5, 6, 7, 9,  11
 */
 
 export const ProductContext = createContext([]);

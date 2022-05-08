@@ -10,23 +10,15 @@ import GoogleMap from "../Shared/GoogleMap/GoogleMap";
 import SpinnerLoader from "../SpinnerLoader/SpinnerLoader";
 
 const Home = () => {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   const url = `http://localhost:5000/data`
-  //   fetch(url)
-  //     .then(res => res.json())
-  //     .then(data =>
-  //       setLoading(false))
-  // }, [])
 
   const [products, setProducts] = useContext(ProductContext);
   const sliceProducts = products.slice(0, 6);
 
   return (
     <>
-      <HeroBanner />
+      {products.length === 0 ? (<SpinnerLoader/>) : (
+        <>
+        <HeroBanner />
       <Service/>
 
       {/* products */}
@@ -45,6 +37,8 @@ const Home = () => {
 
       <Team/>
       <GoogleMap/>
+        </>
+      )}
     </>
   );
 };

@@ -16,6 +16,7 @@ import "./Register.css";
 
 const Register = () => {
   const [user1] = useAuthState(auth);
+
   const token = useToken(user1);
   
 
@@ -103,18 +104,28 @@ const Register = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  useEffect(() => {
-    if (user) {
-      navigate(from, { replace: true });
-    }
-  }, [user]);
+  // useEffect(() => {
+    
+  // }, [user]);
+  if (user1) {
+    navigate(from, { replace: true });
+  }
 
   // problem
   // useEffect(()=>{
-  //   if (token) {
+  //   if (!token) {
   //     navigate(from, { replace: true });
   //   }
   // }, [])
+
+  // useEffect(()=>{
+    
+  // }, [])
+  // if (token) {
+  //   navigate(from, { replace: true });
+  // }
+
+  console.log('token', token)
 
   return (
     <>

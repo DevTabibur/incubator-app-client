@@ -4,10 +4,10 @@ const useProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:5000/data")
+        fetch("https://rocky-caverns-33077.herokuapp.com/data")
         .then(res => res.json())
         .then(data => setProducts(data))
-    }, []);
+    }, [products]);
 
   return [products, setProducts]
 }

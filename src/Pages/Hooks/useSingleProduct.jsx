@@ -4,7 +4,7 @@ const useSingleProduct = (id) => {
     const [singleProduct, setSingleProduct] = useState({});
     
   useEffect(() => {
-    const url = `http://localhost:5000/data/${id}`;
+    const url = `https://rocky-caverns-33077.herokuapp.com/data/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSingleProduct(data));

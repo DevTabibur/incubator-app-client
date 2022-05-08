@@ -21,7 +21,7 @@ const SingleInventory = () => {
     if (quantity > 0) {
       const quantityObj = { quantity };
 
-      const url = `http://localhost:5000/delivery/${id}`;
+      const url = `https://rocky-caverns-33077.herokuapp.com/delivery/${id}`;
 
       fetch(url, {
         method: "PUT",
@@ -32,7 +32,7 @@ const SingleInventory = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          toast.success("item restock successfully", {toastId: "Sucess"});
+          toast.success("item restock successfully", {toastId: "Success"});
         });
     } else {
       toast.error("Stock out", {toastId:"stock out"});
@@ -51,7 +51,7 @@ const SingleInventory = () => {
       const newQuantity = parseInt(addedQuantity) + parseInt(olderQuantity);
 
       const newQuantityObj = { newQuantity };
-      const url = `http://localhost:5000/data/${id}`;
+      const url = `https://rocky-caverns-33077.herokuapp.com/data/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {

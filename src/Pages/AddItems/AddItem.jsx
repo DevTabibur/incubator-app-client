@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../Firebase/firebase.init";
 import "./AddItem.css";
 
@@ -29,10 +30,8 @@ const AddItem = () => {
       image,
     };
 
-    console.log("addNewItem", addNewItem);
-
     // send this newItem info to server
-    const url = `http://localhost:5000/add-item`;
+    const url = `https://rocky-caverns-33077.herokuapp.com/add-item`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -43,12 +42,15 @@ const AddItem = () => {
       .then((res) => res.json())
       .then((data) => {
         // console.log('data post new item', data)
+        toast.success("Added Successfully", {toastId : "SUCCESS"})
       });
+      e.target.reset();
   };
 
   return (
     <>
       <Container className="py-5">
+      <ToastContainer/>
         <div className="section-title mb-4">
           <h2>Add Your Item</h2>
           <p className="mb-0">You can also add your own product here.</p>
@@ -66,7 +68,7 @@ const AddItem = () => {
                   required
                 />
                 <br />
-                <input type="number" name="sold" placeholder="Sold" />
+                <input type="number" name="sold" placeholder="Sold" required/>
                 <br />
                 <input
                   type="number"

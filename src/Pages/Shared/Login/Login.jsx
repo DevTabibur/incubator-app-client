@@ -21,6 +21,11 @@ const [user1] = useAuthState(auth)
   useSignInWithGoogle(auth);
 
   const [token] = useToken(user1);
+  useEffect(()=>{
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [])
 
   // spinnerloader
   let loader ;
@@ -78,9 +83,11 @@ const [user1] = useAuthState(auth)
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  if (token) {
-    navigate(from, { replace: true });
-  }
+  useEffect(()=>{
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [])
 
   useEffect(() => {
     const error = hookError || googleError;
@@ -118,10 +125,13 @@ const [user1] = useAuthState(auth)
 
   const handleGoogle = () =>{
     signInWithGoogle()
-    if(user1){
-      navigate(from, { replace: true });
-    }
+    
   }
+useEffect(()=>{
+  if(user1){
+    navigate(from, { replace: true });
+  }
+}, [user1])
 
   return (
     <>

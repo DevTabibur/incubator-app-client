@@ -25,7 +25,6 @@ const ShowAddedItems = ({ item, handleDelete }) => {
                   <p>{item.description}</p>
                 </Card.Text>
                 <button onClick={()=> handleDelete(item._id)} className="card-btn">DELETE</button>
-                {/* <button onClick={()=> handleUpdate(item._id)} className="card-btn">UPDATE</button> */}
               </Card.Body>
             </Card>
           </Col>

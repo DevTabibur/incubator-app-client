@@ -13,7 +13,6 @@ const MyItems = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
-
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you sure?");
     if (confirm) {
@@ -36,19 +35,20 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user?.email;
-      const url = `http://localhost:5000/singleItem?email=${email}`;
+      const url = `https://rocky-caverns-33077.herokuapp.com/singleItem?email=${email}`;
+      
       try {
         const { data } = await axios.get(url, {
           headers: {
-            authorization: `Bearer ${localStorage.getItem('token')}`,
+            authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
-
         setItems(data);
       } catch (error) {
+
         if (error.response.status === 403 || error.response.status === 401) {
           // signOut(auth);
-          // navigate("/register");
+          // navigate("/signin");
         }
         // toast.error(error.message, { toastId: "abc" });
       }

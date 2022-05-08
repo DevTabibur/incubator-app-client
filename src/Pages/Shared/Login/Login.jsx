@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
@@ -8,15 +7,27 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import GoogleLogo from '../../../Assets/Images/google.svg'
 import auth from '../../../Firebase/firebase.init';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import useToken from '../../Hooks/useToken';
+import SpinnerLoader from '../../SpinnerLoader/SpinnerLoader';
 
 
 const Login = () => {
+const [user1] = useAuthState(auth)
+
   const [signInWithEmailAndPassword, user, loading, hookError] =
   useSignInWithEmailAndPassword(auth);
 
   const [signInWithGoogle, googleUser, loading2, googleError] =
   useSignInWithGoogle(auth);
 
+  const [token] = useToken(user1);
+
+  // spinnerloader
+  let loader ;
+   if(loading || loading2){
+    loader = <SpinnerLoader/>;
+    
+   }
 
 
   const [userInfo, setUserInfo] = useState({
@@ -67,12 +78,9 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const [user1] = useAuthState(auth);
-  useEffect(() => {
-    if (user1) {
-      navigate(from, { replace: true });
-    }
-  }, [user1]);
+  if (token) {
+    navigate(from, { replace: true });
+  }
 
   useEffect(() => {
     const error = hookError || googleError;
@@ -102,13 +110,20 @@ const Login = () => {
     // console.log("email", email);
     if (email) {
       await sendPasswordResetEmail(email);
-      toast.success("Sent email");
+      toast.success("Sent email",  {toastId: "abc"});
     } else {
-      toast("please enter your email address");
+      toast.error("please enter your email address",  {toastId: "abc"});
     }
   };
 
- 
+  const handleGoogle = () =>{
+    signInWithGoogle()
+    if(user1){
+      navigate(from, { replace: true });
+    }
+  }
+
+ console.log(token, user1);
   return (
     <>
       <div className="page-title shadow">
@@ -194,13 +209,17 @@ const Login = () => {
                   </div>
                 </Form>
                 <div className="logo-wrapper w-100">
+                
                   <button
                     className="google-auth"
-                    onClick={() => signInWithGoogle()}
+                    onClick={handleGoogle}
                   >
                     <img src={GoogleLogo} alt="google__logo" />
                     <p> Continue with Google </p>
                   </button>
+
+                  {loader}
+                  
                 </div>
               </div>
             </Col>

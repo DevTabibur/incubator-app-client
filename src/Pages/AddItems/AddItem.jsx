@@ -6,6 +6,8 @@ import './AddItem.css';
 
 const AddItem = () => {
 
+  const [user] = useAuthState(auth);
+
   const handleForm = (e) =>{
     e.preventDefault();
     const name = e.target.fname.value;
@@ -35,6 +37,7 @@ const AddItem = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
+    const sold = e.target.sold.value;
     const description = e.target.description.value;
     const price = e.target.price.value;
     const supplier = e.target.supplier.value;
@@ -42,11 +45,13 @@ const AddItem = () => {
     const image = e.target.image.value;
 
     const addNewItem = {
-      name, email, description, price, supplier, quantity, image
+      name, email, sold, description, price, supplier, quantity, image
     }
 
+    console.log('addNewItem', addNewItem);
+
     // send this newItem info to server
-    const url = `http://localhost:5000/data`;
+    const url = `http://localhost:5000/add-item`;
     fetch(url,{
       method: 'POST',
       headers: {
@@ -71,11 +76,11 @@ const AddItem = () => {
         <Col>
         <div className="restock-form d-block text-center">
               <form onSubmit={handleSubmit}>
-                <input type="email" name='email' placeholder='Email' required />
+                <input type="email" name='email' value={user.email} readOnly/>
                 <br />
                 <input type="text" name='name' placeholder='Product Name'  required/>
                 <br />
-                <textarea name="description" id="description" placeholder='Description'></textarea>
+                <input type="number" name="sold" placeholder="Sold" />
                 <br />
                 <input type="number" name="price" id="price" placeholder='Price'  required/>
                 <br />
@@ -84,7 +89,8 @@ const AddItem = () => {
                 <input type="number" name="quantity" id="quantity" placeholder='Quantity'  required/>
                 <br />
                 <input type="text" name='image' placeholder='Image Link'  required/>
-
+                <br />
+                <textarea name="description" id="description" placeholder='Description'></textarea>
                 <br />
                 <input type="submit" className="submit-btn" />
               </form>

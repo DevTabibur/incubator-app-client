@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase/firebase.init';
 import './AddItem.css';
 
 const AddItem = () => {
@@ -29,6 +31,34 @@ const AddItem = () => {
     })
   }
 
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const description = e.target.description.value;
+    const price = e.target.price.value;
+    const supplier = e.target.supplier.value;
+    const quantity = e.target.quantity.value;
+    const image = e.target.image.value;
+
+    const addNewItem = {
+      name, email, description, price, supplier, quantity, image
+    }
+
+    // send this newItem info to server
+    const url = `http://localhost:5000/data`;
+    fetch(url,{
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(addNewItem)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log('data post new item', data)
+    })
+  }
 
   return (
     <>
@@ -39,15 +69,26 @@ const AddItem = () => {
           </div>
       <Row>
         <Col>
-        <form>
-          <label htmlFor=""></label>
-        </form>
-        {/* <form>
-     <label>First name:</label>
-     <input type="text" id="fname" name="fname">
-     <label>Last name:</label><br>
-      <input type="text" id="lname" name="lname">
-   </form> */}
+        <div className="restock-form d-block text-center">
+              <form onSubmit={handleSubmit}>
+                <input type="email" name='email' placeholder='Email' required />
+                <br />
+                <input type="text" name='name' placeholder='Product Name'  required/>
+                <br />
+                <textarea name="description" id="description" placeholder='Description'></textarea>
+                <br />
+                <input type="number" name="price" id="price" placeholder='Price'  required/>
+                <br />
+                <input type="text" name='supplier' placeholder='Supplier Name'  required/>
+                <br />
+                <input type="number" name="quantity" id="quantity" placeholder='Quantity'  required/>
+                <br />
+                <input type="text" name='image' placeholder='Image Link'  required/>
+
+                <br />
+                <input type="submit" className="submit-btn" />
+              </form>
+            </div>
         </Col>
       </Row>
     </Container>

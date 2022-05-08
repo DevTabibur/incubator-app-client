@@ -3,11 +3,6 @@ import { Card, Col } from 'react-bootstrap';
 import './DeletedPD.css';
 
 const DeletedPD = ({product, handleDelete}) => {
-
-    const [users, setUsers] = useState([]);
-
-  
-
   return (
     <>
         <Col
@@ -38,4 +33,4 @@ const DeletedPD = ({product, handleDelete}) => {
   )
 }
 
-export default DeletedPD
+export default DeletedPD;

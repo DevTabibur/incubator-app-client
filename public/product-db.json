@@ -5,6 +5,7 @@
         "price" : 50,
         "supplier" : "Tom Cruise",
         "quantity" : 10,
+        "sold" : 34,
         "image" : "https://i.ibb.co/J3fsJQr/prod-1-400x400.jpg"
     },
     {
@@ -13,6 +14,7 @@
         "price" : 30,
         "supplier" : "Diago Kaneriya",
         "quantity" : 6,
+        "sold" : 54,
         "image" : "https://i.ibb.co/FmBM6bm/Simple-Analog-Clock-400x400.jpg"
     },
     {
@@ -21,6 +23,7 @@
         "price" : 100,
         "supplier" : "Mark Tombey",
         "quantity" : 8,
+        "sold" : 67,
         "image" : "https://i.ibb.co/wzv9qSN/Black-Smartwatch-400x400.jpg"
     },
     {
@@ -29,6 +32,7 @@
         "price" : 120,
         "supplier" : "De Brune",
         "quantity" : 15,
+        "sold" : 43,
         "image" : "https://i.ibb.co/s9PDwMN/Home-Wireless-Router-400x400.jpg"
     },
     {
@@ -37,6 +41,7 @@
         "price" : 56,
         "supplier" : "Shane Watson",
         "quantity" : 5,
+        "sold" : 21,
         "image" : "https://i.ibb.co/Bzttr79/Gaming-Headset-400x400.jpg"
     },
     {
@@ -45,6 +50,7 @@
         "price" : 99,
         "supplier" : "Tom Hike",
         "quantity" :11,
+        "sold" :45,
         "image" : "https://i.ibb.co/RYjfhCv/FM-Wirelss-Speakers-400x400.jpg"
     },
     {
@@ -53,6 +59,7 @@
         "price" : 300,
         "supplier" : "Chris Rock",
         "quantity" : 8,
+        "sold" : 5,
         "image" : "https://i.ibb.co/5rQnhPf/Modern-Air-Purifier-400x400.jpg"
     },
     {
@@ -61,6 +68,7 @@
         "price" : 70,
         "supplier" : "Will Smith",
         "quantity" : 23,
+        "sold" : 19,
         "image" : "https://i.ibb.co/MRFRf3R/Modern-desk-lamp-400x400.jpg"
     }
 ]

@@ -64,6 +64,7 @@ const ShowProductHome = ({ product }) => {
             <h5>Supplier: {product.supplier}</h5>
             <h5>Price: ${product.price}</h5>
             <h5>Quantity: {product.quantity}</h5>
+            <h5>Sold: {product.sold}</h5>
             <p>{product.description}</p>
           </Card.Text>
           <Link to={`/inventory/${product._id}`} className="card-btn">UPDATE</Link>

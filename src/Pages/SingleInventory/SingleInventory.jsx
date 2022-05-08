@@ -17,8 +17,6 @@ const SingleInventory = () => {
 
   const handleDelivered = (id) => {
     const quantity = singleProduct.quantity;
-    console.log(quantity);
-    console.log("quantity", quantity);
 
     if (quantity > 0) {
       const quantityObj = { quantity };
@@ -34,10 +32,10 @@ const SingleInventory = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          toast.success("item restock successfully");
+          toast.success("item restock successfully", {toastId: "Sucess"});
         });
     } else {
-      toast.error("Stock out");
+      toast.error("Stock out", {toastId:"stock out"});
     }
   };
 
@@ -53,8 +51,6 @@ const SingleInventory = () => {
       const newQuantity = parseInt(addedQuantity) + parseInt(olderQuantity);
 
       const newQuantityObj = { newQuantity };
-
-      console.log("newQuantityObj", newQuantityObj);
       const url = `http://localhost:5000/data/${id}`;
       fetch(url, {
         method: "PUT",
@@ -77,11 +73,11 @@ const SingleInventory = () => {
         <h2 className="mx-auto w-50 text-center my-4"> </h2>
         <Container>
           <ToastContainer />
-          {/* <div className="section-title mb-4">
+          <div className="section-title mb-4">
           
             <h2>{singleProduct?.name}</h2>
-            <p className="mb-0">{singleProduct?._id} details here.</p>
-          </div> */}
+            <h5 className="mb-0">Product ID: {singleProduct?._id} details here.</h5>
+          </div>
           <Row>
             <Col md={6} lg={6} sm={12} className="left-column">
               <div className="product-img d-flex justify-content-center align-items-center">
@@ -103,9 +99,9 @@ const SingleInventory = () => {
                 <h2>{singleProduct.name}</h2>
                 <h3>${singleProduct.price}</h3>
                 <h5>Quantity: {singleProduct.quantity}</h5>
+                <h5>Sold: {singleProduct.sold}</h5>
                 <h5>Supplier: {singleProduct.supplier}</h5>
-                <h5>{singleProduct.supplier}</h5>
-                <p>{singleProduct.singleProduct}</p>
+                <p>{singleProduct.description}</p>
 
                 <button
                   className="delivered-btn"

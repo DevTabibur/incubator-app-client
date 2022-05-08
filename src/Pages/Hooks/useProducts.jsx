@@ -7,7 +7,7 @@ const useProducts = () => {
         fetch("http://localhost:5000/data")
         .then(res => res.json())
         .then(data => setProducts(data))
-    }, [])
+    }, []);
 
   return [products, setProducts]
 }

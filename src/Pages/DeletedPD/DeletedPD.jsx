@@ -23,6 +23,7 @@ const DeletedPD = ({product, handleDelete}) => {
             <h5>Supplier: {product.supplier}</h5>
             <h5>Price: ${product.price}</h5>
             <h5>Quantity: {product.quantity}</h5>
+            <h5>Sold: {product.quantity}</h5>
             <p>{product.description}</p>
           </Card.Text>
           <button onClick={()=>handleDelete(product._id)} className="card-btn">DELETE</button>

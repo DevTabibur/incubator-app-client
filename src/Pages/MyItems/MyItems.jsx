@@ -57,6 +57,32 @@ const MyItems = () => {
 };
 
 const ShowAddedItems = ({ item }) => {
+  
+  const handleDelete = (id)=>{
+    const confirm = window.confirm('Are you sure?');
+        if (confirm) {
+            fetch(`http://localhost:5000/data/${id}`, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        const matched = items.filter(e => e._id !== id);
+                        setItems(matched)
+                    } else {
+                        alert('nothing')
+                    }
+                })
+        }
+  }
+
+  const handleUpdate = (id) =>{
+    alert()
+    console.log('handleUpdate', id);
+  }
+  
+
   return (
     <>
       <Col
@@ -76,9 +102,11 @@ const ShowAddedItems = ({ item }) => {
               <h5>Supplier: {item.supplier}</h5>
               <h5>Price: ${item.price}</h5>
               <h5>Quantity: {item.quantity}</h5>
+              <h5>Sold: {item.sold}</h5>
               <p>{item.description}</p>
             </Card.Text>
-            {/* <Link to={`/inventory/${item._id}`} className="card-btn">UPDATE</Link> */}
+            <button onClick={()=> handleDelete(item._id)} className="card-btn">DELETE</button>
+            {/* <button onClick={()=> handleUpdate(item._id)} className="card-btn">UPDATE</button> */}
           </Card.Body>
         </Card>
       </Col>

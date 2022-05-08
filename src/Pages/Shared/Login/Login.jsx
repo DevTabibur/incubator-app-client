@@ -123,7 +123,6 @@ const [user1] = useAuthState(auth)
     }
   }
 
- console.log(token, user1);
   return (
     <>
       <div className="page-title shadow">

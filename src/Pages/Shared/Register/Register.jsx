@@ -2,15 +2,23 @@
 import { sendEmailVerification } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useAuthState,
+  useCreateUserWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 import auth from "../../../Firebase/firebase.init";
+import useToken from "../../Hooks/useToken";
 import "./Register.css";
 
 const Register = () => {
+  const [user1] = useAuthState(auth);
+  const token = useToken(user1);
+  
+
   const [showPass, setShowPass] = useState(false);
 
   const [userInfo, setUserInfo] = useState({
@@ -101,6 +109,13 @@ const Register = () => {
     }
   }, [user]);
 
+  // problem
+  // useEffect(()=>{
+  //   if (token) {
+  //     navigate(from, { replace: true });
+  //   }
+  // }, [])
+
   return (
     <>
       <div className="page-title shadow">
@@ -113,7 +128,7 @@ const Register = () => {
       </div>
 
       <div className="login-bg">
-      <ToastContainer/>
+        <ToastContainer />
         <Container className="py-5">
           <Row>
             <Col></Col>

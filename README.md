@@ -1,7 +1,9 @@
 # Incubator Inventory Website
 
-[Live Website Link](https://github.com/facebook/create-react-app).
+[Live Website Link](https://incubator-app.web.app/).
+
 [stackOverFlow Questions](https://stackoverflow.com/questions/72157518/why-im-getting-react-backend-validatedomnesting-error-how-am-i-suppose-to-know).
+
 [Server Side Link](https://rocky-caverns-33077.herokuapp.com/)
 
 ## Technologies
@@ -26,5 +28,3 @@
 
 ## Short-Description
 To build this site I'm using React, Node, Bootstrap , MongoDB and many more. This is my first full-stack website that i've ever made in my life.There is RequireAuth functionality installed and worked. Private Route and Server API are using here.
-
-

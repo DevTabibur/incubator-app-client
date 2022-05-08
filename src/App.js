@@ -6,7 +6,6 @@ import { Route, Router, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Shared/Login/Login';
-import Inventory from './Pages/Inventory/Inventory';
 import { createContext } from 'react';
 import useProducts from './Pages/Hooks/useProducts';
 import Blog from './Pages/Blogs/Blog';
@@ -16,14 +15,6 @@ import AddItem from './Pages/AddItems/AddItem';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Register from './Pages/Shared/Register/Register';
 import SingleInventory from './Pages/SingleInventory/SingleInventory';
-
-// ** demo sites https://www.keydesign-themes.com/incubator/shop-classic/
-/*
-## COMPLETE TASK NO.
-1, 2, 3, 4, 5(id showed baki + last baki), 6, 7, 8, 9, 10, 11(full baki)  12, 13, 14
-## BONUS TASK NO.
-1, 2, 3, 4, 5, 6, 7, 8(last baki) 9, 10  11
-*/
 
 export const ProductContext = createContext([]);
 

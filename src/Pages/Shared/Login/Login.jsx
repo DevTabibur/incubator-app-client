@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'

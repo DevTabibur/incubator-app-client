@@ -1,11 +1,8 @@
 // @ts-nocheck
-import { sendEmailVerification } from "firebase/auth";
+// import { sendEmailVerification } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import {
-  useAuthState,
-  useCreateUserWithEmailAndPassword,
-} from "react-firebase-hooks/auth";
+import { useAuthState, useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,6 +15,7 @@ const Register = () => {
   const [user1] = useAuthState(auth);
 
   const token = useToken(user1);
+  const [sendEmailVerification] = useSendEmailVerification(auth);
   
 
   const [showPass, setShowPass] = useState(false);
@@ -104,26 +102,10 @@ const Register = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  // useEffect(() => {
-    
-  // }, [user]);
   if (user1) {
     navigate(from, { replace: true });
   }
 
-  // problem
-  // useEffect(()=>{
-  //   if (!token) {
-  //     navigate(from, { replace: true });
-  //   }
-  // }, [])
-
-  // useEffect(()=>{
-    
-  // }, [])
-  // if (token) {
-  //   navigate(from, { replace: true });
-  // }
 
   console.log('token', token)
 

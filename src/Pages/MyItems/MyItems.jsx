@@ -2,15 +2,29 @@ import axios from "axios";
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../Firebase/firebase.init";
 import ShowAddedItems from "../ShowAddedItems/ShowAddedItems";
+import SpinnerLoader from "../SpinnerLoader/SpinnerLoader";
 import "./MyItems.css";
 
 const MyItems = () => {
   const [user] = useAuthState(auth);
+  const [signInWithEmailAndPassword, user1, loading, hookError] =
+  useSignInWithEmailAndPassword(auth);
+
+  const [signInWithGoogle, googleUser, loading2, googleError] =
+  useSignInWithGoogle(auth);
+
+  // spinnerloader
+  let loader ;
+   if(loading || loading2){
+    loader = <SpinnerLoader/>;
+    
+   }
+
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const handleDelete = (id) => {
@@ -50,15 +64,16 @@ const MyItems = () => {
           // signOut(auth);
           // navigate("/signin");
         }
-        // toast.error(error.message, { toastId: "abc" });
+        toast.error(error.message, { toastId: "abc" });
       }
     };
     getItems();
-  }, []);
+  }, [user]);
 
   return (
     <>
-      <Container className="py-5">
+      {items.length ? (
+        <Container className="py-5">
         <div className="section-title mb-4">
           <h2>Your Added Items</h2>
           <p className="mb-0">here you can find your own item.</p>
@@ -73,6 +88,7 @@ const MyItems = () => {
           ))}
         </Row>
       </Container>
+      ) : (<SpinnerLoader/>)}
     </>
   );
 };

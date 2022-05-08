@@ -7,6 +7,7 @@ import "./AddItem.css";
 
 const AddItem = () => {
   const [user] = useAuthState(auth);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

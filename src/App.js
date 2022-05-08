@@ -37,14 +37,17 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/my-items' element={
+          <RequireAuth>
+            <MyItems/>
+          </RequireAuth>
+        }></Route>
+
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <SingleInventory/>
           </RequireAuth>
         }></Route>
-
-
-        <Route path="/my-items" element={<MyItems/>}></Route>
 
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>

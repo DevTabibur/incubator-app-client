@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
@@ -10,6 +11,7 @@ import auth from '../../../Firebase/firebase.init';
 import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import useToken from '../../Hooks/useToken';
 import SpinnerLoader from '../../SpinnerLoader/SpinnerLoader';
+import GoogleLoader from '../../GoogleLoader/GoogleLoader';
 
 
 const Login = () => {
@@ -31,7 +33,7 @@ const [user1] = useAuthState(auth)
   // spinnerloader
   let loader ;
    if(loading || loading2){
-    loader = <SpinnerLoader/>;
+    loader = <GoogleLoader/>;
     
    }
 
